@@ -9,7 +9,7 @@ class SteamFreeGames {
         const response = await axios.get(steamGetAllApps);
         const apps = response.data.applist.apps;
         const appList = apps.map((app, index) => {
-            return `App ${app.appId}: ${app.name}`;
+            return `App ${app.appid}: ${app.name}`;
           }).join('\n');
     
           return appList;
