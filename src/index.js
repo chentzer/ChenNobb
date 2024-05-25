@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
 const { getAllSteamApps } = require('./discordMessaging');
-const { getCurrentFreeGames } = require('./steamFreeGames');
+const { getCurrentFreeGames } = require('./steam');
 
 const client = new Client({
     intents: [

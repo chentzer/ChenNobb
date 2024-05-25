@@ -1,6 +1,7 @@
-const SteamFreeGames = require('./steamFreeGames');
+const SteamFreeGames = require('./steam');
 
 async function getAllSteamApps() {
+  console.log("Calling getAllSteamApps")
     try {
         const apps = await SteamFreeGames.getAllSteamApps();
         const appList = apps.map((app, index) => {
@@ -17,6 +18,7 @@ async function getAllSteamApps() {
 }
 
 async function getCurrentFreeGames(){
+  console.log("Calling getCurrentFreeGames")
   try{
     const free = await SteamFreeGames.getCurrentFreeGames();
     return free
